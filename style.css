@@ -20,7 +20,6 @@ body {
 
 .card-container{
     display: flex;
-    border: 2px solid orange;
     width: 80%;
 }
 
@@ -39,7 +38,14 @@ body {
     align-content: space-between;
     width: 70%;
     margin-left: 25px; 
-    border: 2px solid red;
+}
+.user-top {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(246, 80%, 60%);
+    padding: 2em;
+    border-radius: 1em;
+    height: 70%;
 }
 
 .user-top img {
@@ -67,14 +73,6 @@ body {
     display: block;
 }
 
-.user-top {
-    display: flex;
-    flex-direction: column;
-    background-color: hsl(246, 80%, 60%);
-    padding: 2em;
-    border-radius: 1em;
-    height: 70%;
-}
 
 .user-bot {
     padding: 2em;
@@ -89,6 +87,11 @@ body {
 }
 
 
+.user-bot p:hover {
+    transition: 200ms;
+    color: #fff;
+    cursor: pointer;
+}
 
 .box {
     display: flex;
@@ -119,6 +122,12 @@ body {
     border-radius: .875em;
     z-index: 1;
 }
+
+.textcont:hover{
+    transition: 200ms;
+    background-color: #3a3e80;
+    cursor: pointer;
+}
 .textcont h1{
     margin-top: 15px;
     width: 100%;
@@ -135,15 +144,19 @@ body {
     font-size: .725em;
     color: #c3c3c3;
 }
-
+.imgcontainer:hover{
+    transition: 200ms;
+    opacity: 0.5;
+    cursor: pointer;
+}
 .imgcont img {
     object-fit: contain;
     width: auto;
     height: 50px;
 }
 
-.active {
-    color: #fff !important;
+p.active  {
+    color: #fff;
 }
 
 
@@ -180,8 +193,9 @@ body {
 
 /* Media Queries*/
 
-@media (max-width: 480px) {
-    .container {
+
+  @media (max-width: 1024px) {
+      .container {
         height: auto;
     }
     .card-container {
@@ -189,26 +203,55 @@ body {
     }
     .user-box {
         width: 100%;
+        margin-bottom: 1em;
     }
     .hours-container{
         margin-left: 0;
         width: 100%;
-        flex-flow:  column nowrap;
-        border: 2px solid blue;
+    }
+    .user-top{
+        height: 90%;
+        flex-direction: row;
+    }
+    .user-bot {
+        height: 10%;
+        padding: 1.25em 2.25em;
+        display: flex;
+        justify-content: center;
+    }
+    .user-bot p {
+        display: inline;
+        margin: 0 1.25em;
+    }
+    .user-box h1 {
+        font-size: 1.35em;
+    }
+    .user-box h1 span{
+        display:inline;
+    }
+    .user-img {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    .user-top img {
+        height: 75px;
+        margin: 0;
+        width: auto;
+    }
+    .user-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1em;
+        width: 70%;
+        
     }
     .box{
         width: 100%;
+        margin-bottom: 20px;
     }
-  }
-
-  @media (max-width: 768px) {
-    .text {
-      font-size: 16px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    .text {
-      font-size: 16px;
+    .box:last-child {
+        margin-bottom: 0px;
     }
   }

@@ -12,14 +12,18 @@
         <div class="card-container">
         <div class="user-box">
             <div class="user-top">
-            <img src="images/image-jeremy.png" alt="User Profile Picture">
-            <p>Report for</p>
-            <h1>Jeremy <span>Robson</span></h1>
+                <div class="user-img">
+                <img src="images/image-jeremy.png" alt="User Profile Picture">
+                </div>
+                <div class="user-text">
+                    <p>Report for</p>
+                    <h1>Jeremy <span>Robson</span></h1>
+                </div>
             </div>
             <div class="user-bot">
-            <p>Daily</p>
-            <p class="active">Weekly</p>
-            <p>Monthly</p>
+            <p id="daily-el">Daily</p>
+            <p id="weekly-el" class="active">Weekly</p>
+            <p id="monthly-el">Monthly</p>
         </div>
         </div>
         <div class="hours-container">
@@ -32,7 +36,7 @@
                     <div class="imgcontainer">
                         <img src="images/icon-ellipsis.svg">
                     </div>
-                    <h1>32hrs</h1>
+                    <h1 class="currenthours">32hrs</h1>
                     <p>Last Week - 36hrs</p>
                 </div>
             </div>
@@ -45,7 +49,7 @@
                     <div class="imgcontainer">
                         <img src="images/icon-ellipsis.svg">
                     </div>
-                    <h1>10hrs</h1>
+                    <h1 class="currenthours">10hrs</h1>
                     <p>Last Week - 7hrs</p>
                 </div>
             </div>
@@ -58,7 +62,7 @@
                     <div class="imgcontainer">
                         <img src="images/icon-ellipsis.svg">
                     </div>
-                    <h1>4hrs</h1>
+                    <h1 class="currenthours">4hrs</h1>
                     <p>Last Week - 8hrs</p>
                 </div>
             </div>
@@ -71,7 +75,7 @@
                     <div class="imgcontainer">
                         <img src="images/icon-ellipsis.svg">
                     </div>
-                    <h1>4hrs</h1>
+                    <h1 class="currenthours">4hrs</h1>
                     <p>Last Week - 5hrs</p>
                 </div>
             </div>
@@ -84,7 +88,7 @@
                     <div class="imgcontainer">
                         <img src="images/icon-ellipsis.svg">
                     </div>
-                    <h1>5hrs</h1>
+                    <h1 class="currenthours">5hrs</h1>
                     <p>Last Week - 10hrs</p>
                 </div>
             </div>
@@ -97,12 +101,14 @@
                     <div class="imgcontainer">
                         <img src="images/icon-ellipsis.svg">
                     </div>
-                    <h1>2hrs</h1>
+                    <h1 class="currenthours">2hrs</h1>
                     <p>Last Week - 2hrs</p>
                 </div>
             </div>
         </div>
     </div>
     </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="data.json"></script>
 </body>
 </html>
