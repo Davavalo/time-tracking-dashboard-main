@@ -13,9 +13,11 @@ const weeklyBtn = document.getElementById("weekly-el")
 const monthlyBtn = document.getElementById("monthly-el")
 const currentEl = document.getElementsByClassName("currenthours")
 const buttonCont = document.getElementsByClassName("user-bot")
+const previousEl = document.getElementsByClassName("previoushours")
 
 let jsonData = []
 let currentHoursTotal = []
+let previoushours = []
 
 
 
@@ -37,32 +39,41 @@ monthlyBtn.addEventListener("click", function(){
 
 function renderDailyData(){
     let currentHoursTotal = []
+    let previoushours = []
     for (let i = 0; i <jsonData.length; i++) {
         currentHoursTotal.push(jsonData[i].timeframes.daily.current)
+        previoushours.push(jsonData[i].timeframes.daily.previous)
     }
     for (let i = 0; i <currentEl.length; i++){
         currentEl[i].innerText = currentHoursTotal[i] + "hrs"
+        previousEl[i].innerText = `Yesterday - ${previoushours[i]}hrs`
     }
 }
 
 function renderWeeklyData(){
     let currentHoursTotal = []
+    let previoushours = []
     for (let i = 0; i <jsonData.length; i++) {
         currentHoursTotal.push(jsonData[i].timeframes.weekly.current)
+        previoushours.push(jsonData[i].timeframes.weekly.previous)
     }
     for (let i = 0; i <currentEl.length; i++){
         currentEl[i].innerText = currentHoursTotal[i] + "hrs"
+        previousEl[i].innerText = `Last Week - ${previoushours[i]}hrs`
     }
    
 }
 
 function renderMonthlyData(){
     let currentHoursTotal = []
+    let previoushours = []
     for (let i = 0; i <jsonData.length; i++) {
         currentHoursTotal.push(jsonData[i].timeframes.monthly.current)
+        previoushours.push(jsonData[i].timeframes.monthly.previous)
     }
     for (let i = 0; i <currentEl.length; i++){
         currentEl[i].innerText = currentHoursTotal[i] + "hrs"
+        previousEl[i].innerText = `Last Month - ${previoushours[i]}hrs`
     }   
 }
 
